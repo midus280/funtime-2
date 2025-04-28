@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FunTime Amusement Park</title>
+    <style>
+        body { font-family: Arial; text-align: center; background: #f2f2f2; }
+        .hero { background-color: #ffcc00; padding: 30px; }
+        img { width: 80%; max-width: 600px; border-radius: 10px; }
+        .discount { font-size: 1.5em; color: green; }
+        .map { margin-top: 30px; }
+        a.button {
+            display: inline-block; padding: 10px 20px; margin-top: 20px;
+            background-color: #007BFF; color: white; text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>🎢 Welcome to FunTime Amusement Park! 🎡</h1>
+        <img src="{{ url_for('static', filename='pictures/rollercoaster.jpg') }}" alt="Amusement Park">
+        <p class="discount">🎉 Get <strong>25% OFF</strong> on your birthday! 🎂</p>
+        <p>Visit us today: {{ day }}/{{ month }}</p>
+        <a class="button" href="{{ url_for('booking') }}">Book Tickets</a>
+
+        <div class="map">
+            <h2>📍 Find Us Here!</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.909779503274!2d-121.91502598469176!3d37.36798327983413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fcbb7b3a6c28b%3A0x2a1d5c5f5a62d49c!2sCalifornia's%20Great%20America!5e0!3m2!1sen!2sus!4v1684086000000!5m2!1sen!2sus" 
+                width="80%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</body>
+</html>
